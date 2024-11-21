@@ -18,7 +18,7 @@
   },
   "type": "module",
   "scripts": {
-    "postinstall": "node scripts/update-history.js",
+    "postinstall": "node scripts/update-history.js && echo 'hi there'",
     "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
@@ -41,6 +41,7 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
+    "@test": "^0",
     "@mdn/yari": "2.65.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
